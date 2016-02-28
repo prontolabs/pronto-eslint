@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 f37efccc1cef20309de28bfbdd16d0c4afb9d550 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1433058807 +0300	commit (initial): Initial commit
+f37efccc1cef20309de28bfbdd16d0c4afb9d550 f37efccc1cef20309de28bfbdd16d0c4afb9d550 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1433058814 +0300	checkout: moving from master to semicolon
+f37efccc1cef20309de28bfbdd16d0c4afb9d550 f7eb73cae47464f2d235a1d014c4617ad2aa0cb0 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1433058820 +0300	commit: Remove semicolon
+f7eb73cae47464f2d235a1d014c4617ad2aa0cb0 f37efccc1cef20309de28bfbdd16d0c4afb9d550 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673968 +0200	checkout: moving from semicolon to master
+f37efccc1cef20309de28bfbdd16d0c4afb9d550 85e04b1eb1a721d42db51d49e49dfeb8255a5741 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673985 +0200	commit (amend): Initial commit
+85e04b1eb1a721d42db51d49e49dfeb8255a5741 f7eb73cae47464f2d235a1d014c4617ad2aa0cb0 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673990 +0200	checkout: moving from master to semicolon
+f7eb73cae47464f2d235a1d014c4617ad2aa0cb0 85e04b1eb1a721d42db51d49e49dfeb8255a5741 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673992 +0200	rebase: checkout master
+85e04b1eb1a721d42db51d49e49dfeb8255a5741 e438134aac40ce86789d552f1bdada6582a987f6 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673992 +0200	rebase: Remove semicolon
+e438134aac40ce86789d552f1bdada6582a987f6 e438134aac40ce86789d552f1bdada6582a987f6 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456673992 +0200	rebase finished: returning to refs/heads/semicolon
+e438134aac40ce86789d552f1bdada6582a987f6 85e04b1eb1a721d42db51d49e49dfeb8255a5741 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456674159 +0200	checkout: moving from semicolon to master
+85e04b1eb1a721d42db51d49e49dfeb8255a5741 931004157205727e6a47586feaed0473c6ddbd66 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456674164 +0200	commit (amend): Initial commit
+931004157205727e6a47586feaed0473c6ddbd66 931004157205727e6a47586feaed0473c6ddbd66 Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456674177 +0200	checkout: moving from master to curly
+931004157205727e6a47586feaed0473c6ddbd66 3a6237c5feacca9a37c36bec5110a1eeb9da703b Mindaugas Mozūras <mindaugas.mozuras@gmail.com> 1456674189 +0200	commit: Add a line of code that does not have the correct curlies (eslint)
