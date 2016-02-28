@@ -1,0 +1,11 @@
+Documentation:
+  Enabled: false
+
+SignalException:
+  EnforcedStyle: only_raise
+
+MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+MultilineMethodCallIndentation:
+  EnforcedStyle: indented
