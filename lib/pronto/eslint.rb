@@ -3,10 +3,10 @@ require 'eslintrb'
 
 module Pronto
   class ESLint < Runner
-    def run(patches, _)
-      return [] unless patches
+    def run
+      return [] unless @patches
 
-      patches.select { |patch| patch.additions > 0 }
+      @patches.select { |patch| patch.additions > 0 }
         .select { |patch| js_file?(patch.new_file_full_path) }
         .map { |patch| inspect(patch) }
         .flatten.compact
@@ -26,7 +26,7 @@ module Pronto
       path = line.patch.delta.new_file[:path]
       level = :warning
 
-      Message.new(path, line, level, offence['message'])
+      Message.new(path, line, level, offence['message'], nil, self.class)
     end
 
     def js_file?(path)
