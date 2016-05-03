@@ -13,7 +13,12 @@ module Pronto
     end
 
     def inspect(patch)
-      options = File.exist?('.eslintrc') ? :eslintrc : :defaults
+      if ENV['ESLINT_CONFIG']
+        # Override options location with ENV variable if available.
+        options = JSON.parse(IO.read(ENV['ESLINT_CONFIG']))
+      else
+        options = File.exist?('.eslintrc') ? :eslintrc : :defaults
+      end
       offences = Eslintrb.lint(patch.new_file_full_path, options).compact
 
       offences.map do |offence|

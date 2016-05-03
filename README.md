@@ -13,4 +13,5 @@ You'll need to install one of the runtimes supported by [ExecJS](https://github.
 
 ## Configuration
 
-Configuring ESLint via .eslintrc will work just fine with pronto-eslint.
+Configuring ESLint via .eslintrc will work just fine with pronto-eslint, though it will not support
+searching higher up the path hierarch. To use an absolute path to your config, use `ESLINT_CONFIG`.
