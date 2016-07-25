@@ -9,10 +9,13 @@ Pronto runner for [ESlint](http://eslint.org), pluggable linting utility for Jav
 
 ## Prerequisites
 
-You'll need to install one of the runtimes supported by [ExecJS](https://github.com/sstephenson/execjs#execjs).
+You'll need to install [eslint by yourself][eslint-install].
+
+[eslint-install]: http://eslint.org/docs/user-guide/getting-started
 
 ## Configuration
 
-Configuring ESLint via .eslintrc and excludes via [.eslintignore][eslintignore] will work just fine with pronto-eslint.
+Configuring ESLint via [.eslintrc and consorts][eslintrc] and excludes via [.eslintignore][eslintignore] will work just fine with pronto-eslint.
 
+[eslintrc]: http://eslint.org/docs/user-guide/configuring#configuration-file-formats
 [eslintignore]: http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories
