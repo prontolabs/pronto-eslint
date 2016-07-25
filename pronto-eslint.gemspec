@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('pronto', '~> 0.6.0')
   s.add_dependency('eslintrb', '~> 2.0', '>= 2.0.0')
+  s.add_dependency('globby', '~> 0.1')
   s.add_development_dependency('rake', '~> 11.0')
   s.add_development_dependency('rspec', '~> 3.4')
   s.add_development_dependency('rspec-its', '~> 1.2')

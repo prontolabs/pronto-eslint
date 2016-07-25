@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 d43de0396c81608113f99f7afd00f7f363e1cae8 Markus Doits <markus.doits@stellenticket.de> 1469450052 +0200	commit (initial): empty init commit
+d43de0396c81608113f99f7afd00f7f363e1cae8 d43de0396c81608113f99f7afd00f7f363e1cae8 Markus Doits <markus.doits@stellenticket.de> 1469450062 +0200	checkout: moving from master to eslintignore
+d43de0396c81608113f99f7afd00f7f363e1cae8 5ffc9b3c7f8e8d8f2e8c91cb69c9698405d1ca53 Markus Doits <markus.doits@stellenticket.de> 1469450067 +0200	commit: add .eslintignore and files with errors
