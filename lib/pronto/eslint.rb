@@ -1,5 +1,4 @@
 require 'pronto'
-require 'eslintrb'
 
 module Pronto
   class ESLint < Runner
@@ -13,8 +12,19 @@ module Pronto
     end
 
     def inspect(patch)
-      options = File.exist?('.eslintrc') ? :eslintrc : :defaults
-      offences = Eslintrb.lint(patch.new_file_full_path, options).compact
+      @_repo_path ||= @patches.first.repo.path
+
+      offences =
+        Dir.chdir(@_repo_path) do
+          JSON.parse(`eslint #{Shellwords.escape(patch.new_file_full_path.to_s)} -f json`)
+        end
+
+      offences =
+        offences
+          .select { |offence| offence['errorCount'] > 0 || offence['warningCount'] > 0 } # no warning or error, no problem
+          .map { |offence| offence['messages'] } # get error messages for that file
+          .flatten
+          .select { |offence| offence['line'] } # for now ignore errors without a line number
 
       offences.map do |offence|
         patch.added_lines.select { |line| line.new_lineno == offence['line'] }
@@ -30,7 +40,7 @@ module Pronto
     end
 
     def js_file?(path)
-      %w(.js .es6 .js.es6).include? File.extname(path)
+      %w(.js .es6 .js.es6).include?(File.extname(path))
     end
   end
 end
