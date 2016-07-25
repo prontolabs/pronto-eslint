@@ -13,4 +13,6 @@ You'll need to install one of the runtimes supported by [ExecJS](https://github.
 
 ## Configuration
 
-Configuring ESLint via .eslintrc will work just fine with pronto-eslint.
+Configuring ESLint via .eslintrc and excludes via [.eslintignore][eslintignore] will work just fine with pronto-eslint.
+
+[eslintignore]: http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories
