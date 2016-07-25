@@ -16,7 +16,7 @@ module Pronto
 
       offences =
         Dir.chdir(@_repo_path) do
-          JSON.parse(`eslint #{patch.new_file_full_path} -f json`)
+          JSON.parse(`eslint #{Shellwords.escape(patch.new_file_full_path)} -f json`)
         end
 
       offences =
