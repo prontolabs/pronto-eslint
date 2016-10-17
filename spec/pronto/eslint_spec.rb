@@ -24,6 +24,20 @@ module Pronto
 
         its(:count) { should == 9 }
         its(:'first.msg') { should == "Expected { after 'if' condition." }
+
+        context(
+          'with files to lint config that never matches',
+          config: { 'files_to_lint' => 'will never match' }
+        ) do
+          its(:count) { should be_zero }
+        end
+
+        context(
+          'with files to lint config that matches only .js',
+          config: { 'files_to_lint' => '\.js$' }
+        ) do
+          its(:count) { should == 4 }
+        end
       end
     end
   end
