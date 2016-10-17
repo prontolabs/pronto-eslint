@@ -13,4 +13,11 @@ You'll need to install one of the runtimes supported by [ExecJS](https://github.
 
 ## Configuration
 
-Configuring ESLint via .eslintrc will work just fine with pronto-eslint.
+Configuring ESLint via `.eslintrc` will work just fine with pronto-eslint.
+
+You can define regular expression for files to lint using configuration file:
+
+```yaml
+# project_root/.pronto_eslint.yml
+files_to_lint: '\.my_custom_extension$' # defaults to '(\.jsx?|\.es6)$'
+```
