@@ -11,6 +11,14 @@ RSpec.shared_context 'test repo' do
   after { FileUtils.mv(dot_git, git) }
 end
 
+RSpec.shared_context 'eslintrc' do
+  let(:eslintrc) { 'spec/fixtures/eslintrc8' }
+  let(:dot_eslintrc) { '.eslintrc' }
+
+  before { FileUtils.mv(eslintrc, dot_eslintrc) }
+  after { FileUtils.mv(dot_eslintrc, eslintrc) }
+end
+
 RSpec.configure do |config|
   config.expect_with(:rspec) { |c| c.syntax = :should }
   config.mock_with(:rspec) { |c| c.syntax = :should }
