@@ -26,11 +26,11 @@ module Pronto
         its(:count) { should == 2 }
 
         it 'all messages are parsing errors' do
-          subject.each { |element|
-            element.msg.should == 'Parsing error: ecmaVersion must be 3, 5, 6, or 7.'
-          }
+          subject.each do |element|
+            element.msg.should ==
+              'Parsing error: ecmaVersion must be 3, 5, 6, or 7.'
+          end
         end
-
       end
 
       context 'patches with a four and a five warnings' do

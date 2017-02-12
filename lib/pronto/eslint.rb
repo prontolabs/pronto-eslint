@@ -17,14 +17,10 @@ module Pronto
 
       offences = Eslintrb.lint(patch.new_file_full_path, options).compact
 
-      fatals = offences.select do |offence|
-        offence['fatal']
-      end
-      .map do |offence|
-        new_message(offence, nil)
-      end
+      fatals = offences.select { |offence| offence['fatal'] }
+        .map { |offence| new_message(offence, nil) }
 
-      return fatals if fatals && fatals.length > 0
+      return fatals if fatals && !fatals.empty?
 
       offences.map do |offence|
         patch.added_lines.select { |line| line.new_lineno == offence['line'] }
