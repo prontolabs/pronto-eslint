@@ -13,8 +13,6 @@ module Pronto
     end
 
     def inspect(patch)
-      options = File.exist?('.eslintrc') ? :eslintrc : :defaults
-
       offences = Eslintrb.lint(patch.new_file_full_path, options).compact
 
       fatals = offences.select { |offence| offence['fatal'] }
@@ -25,6 +23,14 @@ module Pronto
       offences.map do |offence|
         patch.added_lines.select { |line| line.new_lineno == offence['line'] }
           .map { |line| new_message(offence, line) }
+      end
+    end
+
+    def options
+      if ENV['ESLINT_CONFIG']
+        JSON.parse(IO.read(ENV['ESLINT_CONFIG']))
+      else
+        File.exist?('.eslintrc') ? :eslintrc : :defaults
       end
     end
 
