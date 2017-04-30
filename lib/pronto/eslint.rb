@@ -42,7 +42,7 @@ module Pronto
     end
 
     def js_file?(path)
-      %w(.js .es6 .js.es6).include? File.extname(path)
+      %w[.js .es6 .js.es6 .jsx].include?(File.extname(path))
     end
   end
 end
