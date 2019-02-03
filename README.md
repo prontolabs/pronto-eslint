@@ -1,11 +1,11 @@
 # Pronto runner for ESLint
 
-[![Code Climate](https://codeclimate.com/github/mmozuras/pronto-eslint.png)](https://codeclimate.com/github/mmozuras/pronto-eslint)
-[![Build Status](https://travis-ci.org/mmozuras/pronto-eslint.png)](https://travis-ci.org/mmozuras/pronto-eslint)
+[![Code Climate](https://codeclimate.com/github/prontolabs/pronto-eslint.png)](https://codeclimate.com/github/prontolabs/pronto-eslint)
+[![Build Status](https://travis-ci.org/prontolabs/pronto-eslint.png)](https://travis-ci.org/prontolabs/pronto-eslint)
 [![Gem Version](https://badge.fury.io/rb/pronto-eslint.png)](http://badge.fury.io/rb/pronto-eslint)
-[![Dependency Status](https://gemnasium.com/mmozuras/pronto-eslint.png)](https://gemnasium.com/mmozuras/pronto-eslint)
+[![Dependency Status](https://gemnasium.com/prontolabs/pronto-eslint.png)](https://gemnasium.com/prontolabs/pronto-eslint)
 
-Pronto runner for [ESlint](http://eslint.org), pluggable linting utility for JavaScript and JSX. [What is Pronto?](https://github.com/mmozuras/pronto)
+Pronto runner for [ESlint](http://eslint.org), pluggable linting utility for JavaScript and JSX. [What is Pronto?](https://github.com/prontolabs/pronto)
 
 ## Prerequisites
 
