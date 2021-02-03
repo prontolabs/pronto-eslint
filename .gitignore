@@ -3,3 +3,4 @@ pkg/*
 .bundle
 .DS_Store
 Gemfile.lock
+spec/fixtures/test.git/git/COMMIT_EDITMSG
