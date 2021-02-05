@@ -15,10 +15,15 @@ module Pronto
     def inspect(patch)
       offences = Eslintrb.lint(patch.new_file_full_path, options).compact
 
-      fatals = offences.select { |offence| offence['fatal'] }
-        .map { |offence| new_message(offence, nil) }
+      fatals = offences.map do |offence|
+        fatal_offence = -> (line) { offence['fatal'] && (!offence['line'] || line.new_lineno == offence['line']) }
+        patch
+          .added_lines
+          .select(&fatal_offence)
+          .map { |line| new_message(offence, line) }
+      end
 
-      return fatals if fatals && !fatals.empty?
+      return fatals if fatals && !fatals.flatten.empty?
 
       offences.map do |offence|
         patch.added_lines.select { |line| line.new_lineno == offence['line'] }
