@@ -20,6 +20,8 @@ module Pronto
 
       return fatals if fatals && !fatals.empty?
 
+      # Use the line specific commit sha for non-fatal errors so that it can be better
+      # attributed to the specific commit.
       offences.map do |offence|
         patch.added_lines.select { |line| line.new_lineno == offence['line'] }
           .map { |line| new_message(offence, line, line.commit_sha) }
