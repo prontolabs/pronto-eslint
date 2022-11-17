@@ -37,8 +37,10 @@ module Pronto
     def new_message(offence, line)
       path = line ? line.patch.delta.new_file[:path] : '.eslintrc'
       level = line ? :warning : :fatal
+      message = offence['message']
+      message.insert(0, "#{offence['ruleId']}: ") if offence['ruleId']
 
-      Message.new(path, line, level, offence['message'], nil, self.class)
+      Message.new(path, line, level, message, nil, self.class)
     end
 
     def js_file?(path)
