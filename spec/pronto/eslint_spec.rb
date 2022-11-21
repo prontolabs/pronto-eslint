@@ -39,7 +39,7 @@ module Pronto
         let(:patches) { repo.diff('master') }
 
         its(:count) { should == 9 }
-        its(:'first.msg') { should == "Expected { after 'if' condition." }
+        its(:'first.msg') { should == "curly: Expected { after 'if' condition." }
       end
     end
   end
