@@ -38,7 +38,7 @@ module Pronto
       path = line ? line.patch.delta.new_file[:path] : '.eslintrc'
       level = line ? :warning : :fatal
       message = offence['message']
-      message.insert(0, "#{offence['ruleId']}: ") if offence['ruleId']
+      message = "#{offence['ruleId']}: #{message}" if offence['ruleId']
 
       Message.new(path, line, level, message, nil, self.class)
     end
