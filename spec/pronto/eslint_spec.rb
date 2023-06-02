@@ -29,6 +29,8 @@ module Pronto
           subject.each do |element|
             element.msg.should ==
               'Parsing error: ecmaVersion must be 3, 5, 6, or 7.'
+            element.commit_sha.should ==
+              '931004157205727e6a47586feaed0473c6ddbd66'
           end
         end
       end
@@ -40,6 +42,7 @@ module Pronto
 
         its(:count) { should == 9 }
         its(:'first.msg') { should == "curly: Expected { after 'if' condition." }
+        its(:'first.commit_sha') { should == "3a6237c5feacca9a37c36bec5110a1eeb9da703b" }
       end
     end
   end
