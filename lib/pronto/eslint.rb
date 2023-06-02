@@ -42,7 +42,7 @@ module Pronto
       message = offence['message']
       message = "#{offence['ruleId']}: #{message}" if offence['ruleId']
 
-      Message.new(path, line, level, offence['message'], commit_sha, self.class)
+      Message.new(path, line, level, message, commit_sha, self.class)
     end
 
     def js_file?(path)
